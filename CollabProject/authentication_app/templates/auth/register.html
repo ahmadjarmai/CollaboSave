@@ -1,0 +1,15 @@
+<h1>Sign Up</h1>
+{% if message %}
+    {{message}}
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token%}
+    <input type="text" name="username"  placeholder="username">
+    <br><br>
+    <input type="email" name="email" placeholder="email">
+    <br><br>
+    <input type="password" name="password" placeholder="password">
+    <br><br>
+    <input type="submit">
+</form>
