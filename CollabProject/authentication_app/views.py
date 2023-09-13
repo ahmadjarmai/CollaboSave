@@ -12,7 +12,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import default_token_generator
 
 class SignUpView(View):
-    template="auth/register.html"
+    template="registration/register.html"
     def get(self, request):
         return render(request, self.template, )
     def post(self,request):
@@ -47,7 +47,7 @@ class SignUpView(View):
         email = EmailMessage(email_subject, email_body, to=[email])
         email.send()  
          
-        return render(request, 'auth/activation_email.html',{'uidb64':uidb64, 
+        return render(request, 'registration/activation_email.html',{'uidb64':uidb64, 
                                                              'token':token})
 
 class ActivateAccount(View):
@@ -71,18 +71,21 @@ class ActivateAccount(View):
             user=userModel.objects.get(pk=user_pk)
             user.is_active=True
             user.save()
-            return render(request, 'auth/activate_account.html')
+            return render(request, 'registration/activate_account.html')
         else:
             return HttpResponse('wahala')
 
     
 
 class CustomLoginView(LoginView):
-    template_name="auth/login.html"
+    template_name="registration/login.html"
     
     def get_success_url(self) -> str:
         return  reverse('dashboard')
     
 class DashboardTemplateView(TemplateView):
-    template_name="auth/dashboard.html"
+    template_name="registration/dashboard.html"
+    
+class LandingTemplateView(TemplateView) :
+  template_name ="registration/landingpage.html"
     

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block title %}landingpage{% endblock %}
+{% block content %}
+<!-- Header -->
+<header class="bg-dark py-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+                <h1 class="text-white mb-3 mb-md-0">Welcome to CollaboSave!</h1>
+                <p class="lead text-white">CollaboSave is a platform that allows you to save money and withdraw it later. Whether you're saving for a vacation, a new car, or just a rainy day, CollaboSave makes it easy to reach your financial goals.</p>
+            </div>
+        </div>
+    </div>
+</header>
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center mb-5">
+          <h2>How it Works</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 text-center">
+          <i class="fa fa-user fa-5x mb-4"></i>
+          <h3>Create an Account</h3>
+          <p>Sign up for CollaboSave and create an account. It only takes a few minutes!</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="fal fa-money fa-5x mb-4"></i>
+          <h3>Start Saving</h3>
+          <p>Choose how much you want to save and how often. You can set up automatic transfers, so you don't have to worry about remembering to save.</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="fa fa-line-chart fa-5x mb-4"></i>
+          <h3>Watch Your Savings Grow</h3>
+          <p>As you save, your balance will grow. You can track your progress in your account dashboard.</p>
+        </div>
+        <div class="col-md-3 text-center">
+          <i class="fa fa-bank fa-5x mb-4"></i>
+          <h3>Withdraw Your Money</h3>
+          <p>When you're ready to withdraw your savings, simply request a withdrawal. Your money will be transferred to your bank account within 1-2 business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section id="cta" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Get Started Today!</h2>
+          <p>Sign up for CollaboSave today and start saving for your future!</p>
+          <a href="{% url 'signup' %}" class="btn btn-primary btn-lg">Sign Up Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

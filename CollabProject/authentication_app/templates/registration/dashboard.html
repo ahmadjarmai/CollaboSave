@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% block title %}dashboard {% endblock %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <span data-feather="home"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="user"></span>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="search"></span>
+                            Search
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="lock"></span>
+                            Security
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="message-square"></span>
+                            Messages
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="settings"></span>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Dashboard</h1>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="card-title mb-0">Monthly Savings</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">$1,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="card-title mb-0">Total Savings</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">$10,000</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="card-title mb-0">Account Type</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Personal</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="card-header bg-primary text-white">
+                  <h5 class="card-title mb-0">Account Tier</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Tier 1</p>
+                  <p> <a href="#">Upgrade Account Tier </a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-header bg-success text-white">
+                <h5 class="card-title mb-0">Savings Progress</h5>
+              </div>
+              <div class="card-body">
+                <div class="progress">
+                  <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="mt-2 mb-0">75% of your savings goal achieved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Top Ten Transactions Cards -->
+         <div class="row top-transactions">
+          <div class="col-md-12">
+            <h3>Top Ten Transactions</h3>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Transaction 1</h5>
+                  <p class="card-text">Details of Transaction 1</p>
+              </div>
+            </div>
+         </div>
+         <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Transaction 2</h5>
+                    <p class="card-text">Details of Transaction 2</p>
+                </div>
+              </div>
+             </div>
+            </div>
+          </div>
+          
+  </main>
+ </div>
+</div>
+{% endblock %}

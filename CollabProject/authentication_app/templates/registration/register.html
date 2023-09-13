@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}register{% endblock %}
+{% block content %}
+  <!-- register card -->
+  <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card shadow">
+      <div class="card-body">
+        <h1 class="text-center">Register</h1>
+        <!-- User icon -->
+        <div class="text-center mb-3">
+          <i class="fas fa-user fa-5x link-purple"></i>
+        </div>
+        <!-- "Already Register?" -->
+        <div class="text-center mb-3">
+          <p>
+            Already Register?
+            <a href="{% url 'login' %}" class="link-purple">Login</a>
+         </p>
+        </div>
+      <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <!-- Username input -->
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" placeholder="Username" name="username" required>
+        </div>
+        <!-- Password input -->
+        <div class="form-group mb-3">
+          <input type="email" class="form-control" placeholder="email" name ="email" required>
+        </div>
+        <!-- password -->
+        <div class="form-group mb-3">
+          <input type="password" class="form-control" placeholder="password" name="password" required>
+        </div>
+
+        <!-- Register button -->
+        <button type="submit" class="btn btn-primary btn-block">Register</button>
+     </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

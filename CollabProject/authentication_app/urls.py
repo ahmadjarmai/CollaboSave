@@ -1,8 +1,9 @@
 from django.urls import path,include
-from .views import CustomLoginView, SignUpView, ActivateAccount, DashboardTemplateView
+from .views import LandingTemplateView, CustomLoginView, SignUpView, ActivateAccount, DashboardTemplateView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+    path('', LandingTemplateView.as_view(), name="landingpage"),
     path('dashboard/', DashboardTemplateView.as_view(), name="dashboard"),
     path('signup/',SignUpView.as_view(),name='signup'),
     path('activate_account/<uidb64>/<token>/',ActivateAccount.as_view(),name="activate_account"),

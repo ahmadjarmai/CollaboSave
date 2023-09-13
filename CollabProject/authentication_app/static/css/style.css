@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+    margin: 0;
+        }
+  
+  .card {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-control {
+      height: 40px;
+      font-size: 1rem;
+    }
+    .input-group-text {
+      background-color: #f5f5f5;
+      border: none;
+    }
+    .btn-primary {
+      background-color: #A2678A;
+      border-color: #007bff;
+      width: 100%;
+    }
+    .btn-primary:hover {
+      background-color: #0062cc;
+      border-color: #0062cc;
+    }
+    .link-purple {
+      color: #A2678A;
+      text-decoration: underline;
+    }
+    .main {
+      min-height: 100%;
+    }
+
+    .footer {
+      height: 50px;
+      background-color: #f5f5f5;
+      position: sticky;
+      bottom: 0;
+    }
+#navbarSideCollapse {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    transition: right 0.3s ease-in-out;
+}
+
+#navbarSideCollapse.show {
+    right: 0;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+button.navbar-toggler.ml-auto.hidden-sm-up.float-xs-right:focus {
+    outline: none!important;
+}
+
+
+.toggle-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch i {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 24px;
+    color: #f1c40f;
+    transition: transform 0.3s ease-in-out;
+}
+
+.switch input:checked + i {
+    transform: translateX(26px);
+    color: #f39c12;
+}
